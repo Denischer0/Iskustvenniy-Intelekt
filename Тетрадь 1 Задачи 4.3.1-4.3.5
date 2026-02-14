@@ -1,0 +1,45 @@
+Задача 4.3.1
+
+from random import randint
+from matplotlib import pyplot as plt
+import numpy as np
+print ("Kakaya dlina massiva vas interesuet?")
+l=int(input())
+Chisla=[]
+sr=0
+a=0
+b=0
+c=0
+d=0
+e=0
+for i in range(l):
+    x=randint(1,99)
+    if x<20:
+       a+=1
+    elif x>=20 and x<40:
+        b+=1
+    elif x>=40 and x<60:
+        c+=1
+    elif x>=60 and x<40:
+        d+=1
+    elif x>=80 and x<100:
+        e+=1
+    Chisla.append(x/100)
+    sr+=x/100
+sr=sr/l
+print("Massiv", Chisla)
+Chisla.sort()
+if l%2!=0:
+    med=Chisla[l//2]
+else:
+    med=(Chisla[l//2]+Chisla[l//2+1])/2
+print("Sorted Massiv: ",Chisla)
+print("Srednee arefmeticheskoye massiva: ",sr)
+print("Mediannoye znachenie massiva: ",med)
+marks=['0-0,2','0,2-0,4','0,4-0,6','0,6-0,8','0,8-1']
+data=[a,b,c,d,e]
+fig = plt.figure(figsize=(10,7))
+plt.pie(data,labels=marks)
+plt.show()
+plt.grid()
+plt.scatter(marks,data)
