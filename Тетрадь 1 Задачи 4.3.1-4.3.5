@@ -45,3 +45,19 @@ plt.pie(data,labels=marks)
 plt.show()
 plt.grid()
 plt.scatter(marks,data)
+
+Задача 4.3.3
+
+from __future__ import division
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.integrate import simps
+from numpy import trapz
+x=np.arange(0,10,1)
+y=np.abs(np.cos(x*np.exp(np.cos(x)+np.log(x+1))))
+plt.grid()
+plt.plot(x,y,c="r")
+plt.fill_between(x,y)
+area=trapz(y)
+plt.show()
+print(area)
