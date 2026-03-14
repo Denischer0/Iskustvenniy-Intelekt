@@ -27,3 +27,10 @@ print('Расстояние от точки а до точки b = {}'.format(x)
 print('Расстояние от точки b до точки c = {}'.format(y))
 print('Расстояние от точки c до точки d = {}'.format(z))
 plt.show()
+
+Задача 1.3.2 
+
+import numpy as np
+Z=np.zeros((5,5))
+Z+=np.arange(5)
+print(Z)
