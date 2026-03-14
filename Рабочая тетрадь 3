@@ -1,0 +1,29 @@
+Задача 1.3.1 
+
+# -*- coding: utf-8 -*-
+import matplotlib.pyplot as plt
+import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
+
+fig = plt.figure()
+ax = fig.add_subplot(111,projection = '3d')
+
+ax.scatter(0,0,0)
+ax.scatter(1,4,5)
+ax.scatter(2,0,1)
+ax.scatter(3,3,3)
+a=np.array([0,0,0])
+b=np.array([1,4,5])
+c=np.array([2,0,1])
+d=np.array([3,3,3])
+x=np.linalg.norm(a-b)
+y=np.linalg.norm(b-c, ord=np.inf)
+z=np.linalg.norm(c-d,ord=1)
+print("Координаты точки а - 0,0,0")
+print("Координаты точки b - 1,4,5")
+print("Координаты точки c - 2,0,1")
+print("Координаты точки d - 3,3,3")
+print('Расстояние от точки а до точки b = {}'.format(x))
+print('Расстояние от точки b до точки c = {}'.format(y))
+print('Расстояние от точки c до точки d = {}'.format(z))
+plt.show()
